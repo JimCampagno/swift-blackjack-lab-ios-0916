@@ -38,6 +38,17 @@ class Card {
         }
     }
     
+    func generateCardValue() -> UInt {
+        switch rank {
+        case "A":
+            return 1
+        case "K", "Q", "J":
+            return 10
+        default:
+            return UInt(rank)!
+        }
+    }
+    
     static func validSuits() -> [String] {
         return ["♠︎", "♥︎", "♦︎", "♣︎"]
     }
